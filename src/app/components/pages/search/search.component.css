@@ -1,0 +1,41 @@
+div{
+  /*display: flex;*/
+  /*justify-content: end;*/
+  /*margin-top: 3rem;*/
+  /*margin-bottom: 1.5rem;*/
+  /*margin-right: .8rem;*/
+}
+input{
+  border: none;
+  height: 2rem;
+  border-radius: 3rem 0 0 3rem;
+  max-width: 15rem;
+  background: rgba(154, 153, 153, 0.11);
+  padding: 1.2rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  outline: none;
+}
+div button{
+  height: 2.4rem;
+  width: 5rem;
+  color: gray;
+  font-size: 1.2rem;
+  border-radius: 0 3rem 3rem 0 ;
+  border: none;
+  background-color: chocolate;
+  color: white;
+  opacity: 0.8;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+div button:hover{
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1150px){
+  .search{
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,28 @@
+<app-not-found
+  [visible]="!food.id"
+  notFoundMessage="К сожалению, такого у нас нет :("
+  restLinkText="Вернуться к поиску любимой пиццы  🍕"
+></app-not-found>
+
+<div *ngIf="food.id" class="container">
+  <img [src]="food.imageUrl" [alt]="food.name">
+  <div class="details">
+    <div class="header">
+      <span class="name">{{food.name}}</span>
+      <span class="favorite {{food.favorite?'':'not'}}">❤</span>
+    </div>
+    <div class="tags">
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
+    </div>
+    <div class="description">
+      <span>{{food.description}}</span>
+    </div>
+    <div class="sizeWeight">
+      <span>{{food.sizeWeight}}</span>
+    </div>
+    <div class="price">
+      <span>{{food.price}}</span>
+    </div>
+    <button (click)="addToCart()">Добавить в корзину</button>
+  </div>
+</div>

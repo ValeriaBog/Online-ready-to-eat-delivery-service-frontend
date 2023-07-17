@@ -1,0 +1,37 @@
+<div class="container"  [formGroup]="userForm">
+  <h1>Личный кабинет</h1>
+  <div class="userInfo">
+    <span class="userName">Привет, {{user.name}} {{user.lastName}}! 😊</span>
+    <span class="email">Твоя почта: {{user.email}}</span>
+    <span>Укажи номер телефона и адрес доставки для заказа:</span>
+  </div>
+
+  <div class="input-container form">
+    <label htmlFor="userPhone">Номер телефона: </label>
+    <div>
+      <input type="tel"
+             pInputText
+             formControlName="userPhone"
+             (focus)="resetErrors()"
+             placeholder="+7 (900) 000 000"
+             [(ngModel)]="userPhone"
+      />
+    </div>
+  </div>
+  <div class="input-container form">
+    <label htmlFor="address">Адрес доставки: </label>
+    <div>
+      <input type="text"
+             pInputText
+             formControlName="address"
+             (focus)="resetErrors()"
+             placeholder="Cанкт-Петербург, Невский пр.30, кв.2"
+             [(ngModel)]="address"
+      />
+    </div>
+  </div>
+  <button (click)="saveUserInfo()" [disabled]="userForm.invalid" >Сохранить</button>
+
+  <router-outlet></router-outlet>
+  <button (click)="logOut()">Выйти из личного кабинета</button>
+</div>

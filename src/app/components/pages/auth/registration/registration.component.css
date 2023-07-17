@@ -1,0 +1,67 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+}
+.details{
+  width: 25rem;
+}
+.auth{
+  margin-left: 67px;
+}
+
+.input-container {
+  margin: 10px 0;
+
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-list{
+  color: red
+}
+.buttons{
+  display: flex;
+  align-items: center;
+}
+input{
+  width: 272px;
+}
+.button-auth{
+  margin-top: 10px;
+}
+.button-auth button {
+  background: chocolate;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.button-log button{
+  border: none;
+  cursor: pointer;
+  background: white;
+  border-bottom: 1px dashed;
+  font-size: 15px;
+}

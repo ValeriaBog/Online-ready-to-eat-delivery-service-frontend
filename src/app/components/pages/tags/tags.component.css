@@ -1,0 +1,18 @@
+div{
+
+}
+
+div a{
+  background: rgba(154, 153, 153, 0.11);
+  padding: 9px 20px;
+  margin: 0.9rem 0.15rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  color: chocolate;
+}
+@media screen and (max-width: 839px){
+  div a{
+    display: flex;
+    flex-direction: row;
+  }
+}

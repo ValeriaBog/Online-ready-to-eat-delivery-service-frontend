@@ -1,0 +1,101 @@
+header {
+  position: relative;
+  background: #fff;
+  padding: 0;
+  border-bottom: 1px solid rgba(194, 193, 193, 0.76);
+}
+
+a {
+  color: chocolate;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.6;
+  color: chocolate;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text{
+
+}
+marquee{
+  font-size: 25px;
+  font-weight: 900;
+  padding: 1rem;
+  color: chocolate;
+  width: 600px;
+}
+a.logo {
+  font-size: 25px;
+  font-weight: 900;
+  padding: 1rem;
+
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+}
+
+ul a {
+  padding: 1rem;
+  display: inline-block;
+}
+
+a span {
+  background: chocolate;
+  color: #fff;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size: 0.9rem;
+}
+
+span {
+  margin-top: 13px;
+  margin-right: 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: chocolate;
+  transition: all 0.3s ease-in-out;
+}
+
+span:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu {
+  position: absolute; /*относительно menu-container-а*/
+  z-index: 1;
+  background: whitesmoke;
+  display: none; /*скрываем выпадающее меню */
+}
+
+.menu-container:hover .menu {
+  display: block; /*при наведении появляется выпадающее меню */
+}
+
+.menu a {
+  width: 100%;
+  min-width: 8rem;
+}
+
+@media screen and (max-width: 448px){
+  marquee{
+    display: none;
+  }
+}

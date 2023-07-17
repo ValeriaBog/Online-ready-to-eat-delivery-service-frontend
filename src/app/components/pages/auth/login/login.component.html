@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="details">
+    <h2>Вход</h2>
+
+    <div class="login" [formGroup]="loginForm">
+
+        <div class="input-container">
+          <label htmlFor="email">Почта</label>
+          <div>
+            <input type="email"
+                   pInputText
+                   (focus)="resetErrors()"
+                   formControlName="email"
+                   placeholder="abc@gmail.com"
+                   [(ngModel)]="email"
+                   />
+          </div>
+<!--          <div class="error-list" *ngIf="fc.email.invalid">-->
+<!--            <div *ngIf="fc.email.errors?.required">Укажите почту</div>-->
+<!--          </div>-->
+        </div>
+
+
+        <div class="input-container">
+          <label htmlFor="password">Пароль</label>
+          <div>
+                      <input type="password"
+                             pInputText
+                             (focus)="resetErrors()"
+                             formControlName="password"
+                             placeholder="**************"
+                             [(ngModel)]="password"
+
+                             />
+          </div>
+<!--          <div class="error-list" *ngIf="errors.password">-->
+<!--            <div *ngIf="fc.password.errors?.required">Укажите пароль</div>-->
+<!--          </div>-->
+
+        </div>
+
+      <router-outlet></router-outlet>
+        <div class="buttons">
+          <div class="button-enter">
+            <button type="submit" [disabled]="loginForm.invalid" (click)="submitLogin()">Войти</button>
+          </div>
+
+          <router-outlet></router-outlet>
+          <div class="button-auth">
+            <button type="submit"  (click)="toRegistr()">Еще не зарегистрированы?</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+

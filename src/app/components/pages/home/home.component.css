@@ -1,0 +1,110 @@
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0 ;
+}
+
+
+ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+li a {
+  height: 31rem;
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: column;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: chocolate;
+  transition: all 0.2s ease-in-out;
+}
+
+li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+li a img {
+  object-fit: cover;
+
+}
+
+.content {
+  height: 8rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin-top: 0.3rem;
+
+}
+
+.name {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.favorite {
+  font-size: 1.2rem;
+  right: 1rem;
+  top: 0.5rem;
+  position: absolute;
+}
+
+.favorite.not {
+  color: grey;
+}
+
+.stars {
+  margin-bottom: 0.2rem;
+}
+
+.product-item-footer {
+  align-items: flex-start;
+  justify-content: space-between;
+  display: flex;
+}
+
+.description {
+  flex: 9;
+}
+
+.description span {
+  margin-top: 0.2rem;
+  padding: 0.5rem 0;
+  margin-right: 0.3rem;
+  color: grey;
+  font-size: 0.9rem;
+  display: inline-block;
+
+}
+
+.sizeWeight {
+  text-align: right;
+  flex: 3;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  color: #414141;
+  padding: 0.3rem;
+  left: 0.9rem;
+  background: white;
+  bottom: -24px;
+  position: absolute;
+}
+
+.price::after {
+  content: '₽';
+}

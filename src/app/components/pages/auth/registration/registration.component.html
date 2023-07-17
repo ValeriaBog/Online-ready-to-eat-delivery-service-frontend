@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="details">
+
+    <h2>Регистрация</h2>
+
+    <div class="auth" [formGroup]="registrForm">
+      <div class="input-container">
+        <label htmlFor="name">Имя</label>
+        <div>
+          <input type="text"
+                 pInputText
+                 formControlName="name"
+                 [(ngModel)]="name"
+                 (focus)="resetErrors()"
+          />
+        </div>
+<!--        <div class="error-list" *ngIf="errors.name">-->
+<!--          <div *ngIf="fr.name.errors?.required">Укажите имя</div>-->
+<!--        </div>-->
+      </div>
+
+      <div class="input-container">
+        <label htmlFor="lastName">Фамилия</label>
+        <div>
+          <input type="text"
+                 pInputText
+                 formControlName="lastName"
+                 (focus)="resetErrors()"
+                 [(ngModel)]="lastName"/>
+        </div>
+<!--        <div class="error-list" *ngIf="errors.lastName">-->
+<!--          <div *ngIf="fr.lastName.errors?.required">Укажите фамилию</div>-->
+<!--        </div>-->
+      </div>
+
+      <div class="input-container">
+        <label htmlFor="email">Почта</label>
+        <div>
+          <input type="email"
+                 pInputText
+                 placeholder="abc@gmail.com"
+                 formControlName="email"
+                 (focus)="resetErrors()"
+                 [(ngModel)]="email"/>
+        </div>
+<!--        <div class="error-list" *ngIf="errors.email">-->
+<!--          <div *ngIf="fr.email.errors?.required">Укажите почту</div>-->
+<!--        </div>-->
+      </div>
+
+
+      <div class="input-container">
+        <label htmlFor="password">Пароль</label>
+        <div>
+          <input type="password"
+                 pInputText
+                 placeholder="**************"
+                 formControlName="password"
+                 (focus)="resetErrors()"
+                 [(ngModel)]="password"
+          />
+          <!--          <p-password formControlName="password"></p-password>-->
+        </div>
+<!--        <div class="error-list" *ngIf="errors.password">-->
+<!--          <div *ngIf="fr.password.errors?.required">Укажите пароль</div>-->
+<!--        </div>-->
+
+
+      </div>
+
+      <div class="buttons">
+
+        <div class="button-auth">
+          <button type="submit" [disabled]="registrForm.invalid"
+                  (click)="submitRegist()">
+            Зарегистрироваться
+          </button>
+        </div>
+
+        <router-outlet></router-outlet>
+        <div class="button-log">
+          <button type="submit" (click)="toLogin()">Войти</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+

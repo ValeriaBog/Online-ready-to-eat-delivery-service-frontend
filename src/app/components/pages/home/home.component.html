@@ -1,0 +1,35 @@
+<div class="search">
+  <app-tags></app-tags>
+  <app-search></app-search>
+</div>
+
+
+<app-not-found [visible]="!foods || !foods.length"
+               restLinkText="Вернуться к поиску любимой пиццы  🍕"
+></app-not-found>
+
+<ul>
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="">
+      <div class="content">
+        <div class="name">
+          {{food.name}}
+        </div>
+        <span class="favorite {{food.favorite?'':'not'}}">❤</span>
+
+        <div class="product-item-footer">
+          <div class="description">
+            <span>
+              {{food.description}}
+            </span>
+          </div>
+
+          <div class="price">
+            {{food.price}}
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
